@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__input {
+    border: none;
+    border-bottom: 3px solid var(--primaryColor);
+    padding: 1rem;
+    outline: none;
+
+    &::placeholder {
+      font-family: var(--ff-main);
+      text-transform: uppercase;
+      color: var(--primaryColor);
+      font-size: 2rem;
+    }
+
+    &:focus {
+      outline: 1px solid var(--primaryColor);
+    }
+  }
+
+  &__btn {
+    width: 10%;
+  }
+}

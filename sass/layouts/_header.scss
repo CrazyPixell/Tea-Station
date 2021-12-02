@@ -1,0 +1,26 @@
+.header {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/main-bcg.jpeg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+
+  &__btn {
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      padding: 2rem 3rem;
+      animation: show 2s 1s linear;
+      animation-fill-mode: backwards;
+      letter-spacing: var(--letterSpacing);
+    }
+  }
+}

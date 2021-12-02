@@ -1,0 +1,124 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.about {
+  // display: flex;
+  padding: 8rem 5%;
+  gap: 4rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+
+  &__img-box {
+    border: 7px solid var(--primaryColor);
+    border-radius: 22px;
+    overflow: hidden;
+    width: 90%;
+    background-color: var(--primaryColor);
+  }
+
+  &__img {
+    max-width: 100%;
+    // display: block;
+    height: 100%;
+    transition: var(--mainTransition);
+  }
+
+  &__content {
+    width: 90%;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  &__img-box:hover &__img {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+.products {
+  padding: 8rem 14%;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: center;
+
+  &__text {
+    color: var(--mainWhite);
+    font-size: 1.8rem;
+    margin: 2rem 0;
+  }
+}
+
+.services {
+  padding: 8rem 14%;
+  text-align: center;
+}
+
+.services-container {
+  margin-top: 10rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  justify-items: center;
+}
+
+.contact {
+  padding: 8rem 1%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  row-gap: 10rem;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &__icon {
+    margin-right: 1rem;
+  }
+
+  &__info {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+}
+
+.footer {
+  padding: 8rem 0;
+  text-align: center;
+
+  &__social-icon {
+    font-size: 3rem;
+    color: var(--mainWhite);
+    opacity: 0.8;
+    transition: var(--mainTransition);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      color: var(--primaryColor);
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: var(--mainWhite);
+
+    span {
+      color: var(--primaryColor);
+      text-transform: uppercase;
+      margin: 0 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    background-color: var(--primaryColor);
+    color: var(--mainDark);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    outline: 3px solid var(--primaryColor);
+    outline-offset: 4px;
+    padding: 1rem 1rem;
+    transition: var(--mainTransition);
+    letter-spacing: calc(var(--letterSpacing) - 0.5rem);
+  }
+
+  &:hover {
+    background-color: var(--primaryColorDarken);
+    outline-color: var(--primaryColorDarken);
+    color: var(--mainGrey);
+    outline-width: 5px;
+  }
+}

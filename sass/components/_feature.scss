@@ -1,0 +1,38 @@
+.feature {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 25%;
+  height: 100%;
+  transition: var(--mainTransition);
+
+  &__icon {
+    font-size: 4rem;
+    color: var(--mainDark);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: calc(var(--letterSpacing) - 0.2rem);
+    color: var(--primaryColor);
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: var(--mainDark);
+  }
+
+  &:hover {
+    background-color: var(--primaryColor);
+  }
+
+  &:hover &__title {
+    color: var(--mainWhite);
+  }
+
+  &:hover &__icon {
+    transform: translateY(-1rem);
+  }
+}

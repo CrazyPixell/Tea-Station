@@ -1,0 +1,35 @@
+.heading-primary {
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  font-size: 6rem;
+  letter-spacing: var(--letterSpacing);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  animation: slideInLeft 5s ease-in-out;
+}
+
+.heading-secondary {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  color: var(--mainDark);
+
+  &--white {
+    color: var(--mainWhite);
+  }
+}
+
+.heading-tertiary {
+  font-family: var(--slantedText);
+  font-size: 3rem;
+  color: var(--primaryColor);
+  letter-spacing: calc(var(--letterSpacing) * 1.2);
+
+  &--animation {
+    animation: slideInRight 5s ease-in-out;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}

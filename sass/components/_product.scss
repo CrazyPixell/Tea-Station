@@ -1,0 +1,30 @@
+.product-item {
+  padding-bottom: 3rem;
+  &__img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+  }
+
+  &__title {
+    color: var(--mainWhite);
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: calc(var(--letterSpacing) - 0.3rem);
+    margin: 2rem 0;
+  }
+
+  &__price {
+    font-family: var(--slantedText);
+    font-size: 2.6rem;
+    color: var(--primaryColor);
+    font-weight: 700;
+
+    span {
+      margin-right: 1rem;
+      font-size: 3rem;
+      font-weight: 400;
+    }
+  }
+  border-bottom: 5px solid var(--primaryColor);
+}

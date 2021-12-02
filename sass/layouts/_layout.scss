@@ -1,0 +1,54 @@
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      10,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+  grid-template-rows: 100vh repeat(6, min-content);
+}
+
+.header {
+  grid-column: full-start / full-end;
+  padding: 0 5%;
+}
+
+.divider {
+  height: 1rem;
+  grid-column: full-start / full-end;
+  background-image: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+
+.features {
+  grid-column: full-start / full-end;
+  background-color: var(--mainGrey);
+}
+
+.about {
+  grid-column: center-start / center-end;
+}
+
+.products {
+  grid-column: full-start / full-end;
+  background-color: var(--mainDark);
+}
+
+.services {
+  grid-column: full-start / full-end;
+  background-color: var(--mainGrey);
+}
+
+.contact {
+  grid-column: center-start / center-end;
+}
+
+.footer {
+  grid-column: full-start / full-end;
+  background-color: var(--mainDark);
+}

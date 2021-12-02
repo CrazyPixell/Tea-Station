@@ -1,0 +1,14 @@
+{
+  "name": "teastation",
+  "version": "1.0.0",
+  "description": "Tea station landing page",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "Anton Zhirkov",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.44.0"
+  }
+}
