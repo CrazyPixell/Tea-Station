@@ -4,6 +4,7 @@ const btnShow = document.querySelector('.nav-btn--show');
 const btnClose = document.querySelector('.nav-btn--close');
 const nav = document.querySelector('.nav');
 const btnLearn = document.querySelectorAll('.btn');
+const featuresContainer = document.querySelector('.features');
 
 btnLearn.forEach(btn =>
   btn.addEventListener('click', function (e) {
@@ -16,6 +17,7 @@ btnLearn.forEach(btn =>
   })
 );
 
+// Navigation
 btnShow.addEventListener('click', function () {
   nav.classList.add('nav--show');
   btnClose.style.visibility = 'visible';
@@ -36,3 +38,23 @@ nav.addEventListener('click', function (e) {
     });
   }
 });
+
+// Nav effect
+const linkEffect = function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    siblings.forEach(el => {
+      if (el !== link) {
+        el.style.textDecoration = this;
+      }
+    });
+  }
+};
+
+nav.addEventListener(
+  'mouseover',
+  linkEffect.bind('line-through var(--primaryColor) 5px')
+);
+
+nav.addEventListener('mouseout', linkEffect.bind('none'));
