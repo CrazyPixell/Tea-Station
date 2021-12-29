@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tea Station--Home</title>
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -15,6 +29,8 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- js -->
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <span class="nav-btn nav-btn--show">
@@ -59,7 +75,7 @@
       <div class="divider"></div>
 
       <!-- features -->
-      <section class="features" id="features">
+      <section class="section-slide-left features" id="features">
         <div class="feature">
           <i class="fas fa-mug-hot feature__icon"></i>
           <h4 class="feature__title">Made with love</h4>
@@ -97,7 +113,7 @@
         </div>
       </section>
       <!-- about -->
-      <section class="about" id="about">
+      <section class="section-slide-up about" id="about">
         <div class="about__img-box">
           <img src="img/about-bcg.jpeg" alt="Tea brewing" class="about__img" />
         </div>
@@ -118,7 +134,7 @@
         </div>
       </section>
       <!-- products -->
-      <section class="products" id="products">
+      <section class="section-slide-left products" id="products">
         <div class="products__text-content">
           <h3 class="heading-tertiary">Check Out</h3>
           <h2 class="heading-secondary heading-secondary--white">
@@ -134,9 +150,10 @@
 
         <div class="product-item">
           <img
-            src="img/product-1.jpeg"
+            src="img/product-1-lazy.jpg"
+            data-src="img/product-1.jpeg"
             alt="Black tea"
-            class="product-item__img"
+            class="product-item__img lazy-img"
           />
           <h5 class="product-item__title">Black long tea</h5>
           <p class="product-item__price"><span>$</span> 3.99</p>
@@ -144,9 +161,10 @@
 
         <div class="product-item">
           <img
-            src="img/product-2.jpeg"
+            src="img/product-2-lazy.jpg"
+            data-src="img/product-2.jpeg"
             alt="Сhamomile tea"
-            class="product-item__img"
+            class="product-item__img lazy-img"
           />
           <h5 class="product-item__title">Сhamomile tea</h5>
           <p class="product-item__price"><span>$</span> 4.99</p>
@@ -154,20 +172,21 @@
 
         <div class="product-item">
           <img
-            src="img/product-3.jpeg"
+            src="img/product-3-lazy.jpg"
+            data-src="img/product-3.jpeg"
             alt="Tea with spices"
-            class="product-item__img"
+            class="product-item__img lazy-img"
           />
           <h5 class="product-item__title">Tea with spices</h5>
           <p class="product-item__price"><span>$</span> 5.99</p>
         </div>
       </section>
       <!-- services -->
-      <section class="services" id="services">
+      <section class="section-slide-up services" id="services">
         <h3 class="heading-tertiary">Explore</h3>
         <h2 class="heading-secondary">Our services</h2>
         <div class="services-container">
-          <div class="service">
+          <!-- <div class="service">
             <img
               src="img/service-1.webp"
               alt="Tea picture"
@@ -210,11 +229,11 @@
               <h5 class="service__title">Tea aging service</h5>
               <button class="service__btn">Read more</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
       <!-- contact us -->
-      <section class="contact" id="contacts">
+      <section class="section-slide-left contact" id="contacts">
         <div class="contacts">
           <div class="contacts__item">
             <h3 class="heading-tertiary heading-tertiary--uppercase">
@@ -262,6 +281,8 @@
           ></textarea>
           <a href="#" class="btn form__btn">Send</a>
         </form>
+
+        <div id="map"></div>
       </section>
       <!-- footer -->
       <footer class="footer">
@@ -277,6 +298,5 @@
         </p>
       </footer>
     </div>
-    <script src="js/script.js"></script>
   </body>
 </html>

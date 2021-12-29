@@ -75,6 +75,16 @@
     transform: rotate(360deg);
   }
 }
+.slide-left {
+  transform: translateX(-8rem);
+  opacity: 0;
+}
+
+.slide-up {
+  transform: translateY(8rem);
+  opacity: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -439,6 +449,7 @@ body {
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  transition: var(--mainTransition);
 }
 
 .about {
@@ -447,6 +458,7 @@ body {
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  transition: var(--mainTransition);
 }
 .about__img-box {
   border: 7px solid var(--primaryColor);
@@ -478,6 +490,7 @@ body {
   gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-items: center;
+  transition: var(--mainTransition);
 }
 .products__text {
   color: var(--mainWhite);
@@ -488,6 +501,7 @@ body {
 .services {
   padding: 8rem 14%;
   text-align: center;
+  transition: var(--mainTransition);
 }
 
 .services-container {
@@ -503,6 +517,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   row-gap: 10rem;
+  transition: var(--mainTransition);
 }
 
 .contacts {
@@ -516,6 +531,14 @@ body {
 .contacts__info {
   text-transform: uppercase;
   font-size: 1.8rem;
+}
+
+#map {
+  grid-column: 1/-1;
+  height: 34vh;
+  background-color: #ddd;
+  border: 5px solid var(--primaryColor);
+  border-radius: 22px;
 }
 
 .footer {

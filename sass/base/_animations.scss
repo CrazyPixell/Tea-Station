@@ -92,3 +92,13 @@
     transform: rotate(360deg);
   }
 }
+
+.slide-left {
+  transform: translateX(-8rem);
+  opacity: 0;
+}
+
+.slide-up {
+  transform: translateY(8rem);
+  opacity: 0;
+}
